@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Vista form de purchases  -->
+        <record model="ir.ui.view" id="res_partner_transportista_form">
+            <field name="name">Contactos</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='l10n_ar_afip_responsibility_type_id']" position="after">
+                    <button name="get_data_afip" string="Completar datos" type="object" icon="fa-refresh" class="btn btn-info"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo> 
